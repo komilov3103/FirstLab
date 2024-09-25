@@ -1,8 +1,6 @@
-package ru.mpei;
+package ru.mpei.calcs;
 
-import java.lang.reflect.Array;
-
-public class ArabicCalcs extends Calculations{
+public class ArabicCalcs extends Calculations {
 
     private int firstNumber;
     private int secondNumber;

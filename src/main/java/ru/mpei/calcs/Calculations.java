@@ -1,4 +1,4 @@
-package ru.mpei;
+package ru.mpei.calcs;
 
 public abstract class Calculations {
 
