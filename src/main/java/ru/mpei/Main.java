@@ -33,12 +33,16 @@ public class Main {
 
         if (NumberIdentifier.isArbicNumber(firstNumber) &&
                 NumberIdentifier.isArbicNumber(secondNumber)) {
-             calculator = new ArabicCalcs(Integer.parseInt(firstNumber),
-                    Integer.parseInt(secondNumber));
+
+            calculator = new ArabicCalcs(Integer.parseInt(firstNumber),
+                        Integer.parseInt(secondNumber));
+
         } else if (NumberIdentifier.isRomanNumber(firstNumber) &&
                 NumberIdentifier.isRomanNumber(secondNumber)){
-             calculator = new RomanCalcs(firstNumber, secondNumber);
-            isRoman = true;
+
+            calculator = new RomanCalcs(firstNumber, secondNumber);
+             isRoman = true;
+
         } else {
             System.out.println("Неверный формат чисел");
             return;
@@ -60,7 +64,7 @@ public class Main {
         }
 
         if (isRoman){
-            if (result < 0){
+            if (result <= 0){
                 System.out.println("Неположительный результат");
             } else {
                 System.out.println(RomanCalcs.convertToRoman(result));

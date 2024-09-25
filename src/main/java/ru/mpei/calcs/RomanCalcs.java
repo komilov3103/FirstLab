@@ -95,6 +95,7 @@ public class RomanCalcs extends Calculations {
     }
 
     public static String convertToRoman(int number) {
+        String romanHundred = "";
 
         String romanOnes = romanDigit(number % 10, "I", "V", "X");
         number /= 10;
@@ -102,7 +103,11 @@ public class RomanCalcs extends Calculations {
         String romanTens = romanDigit(number % 10, "X", "L", "C");
         number /= 10;
 
-        String result = romanTens + romanOnes;
+        if (number == 1){
+            romanHundred = "C";
+        }
+
+        String result = romanHundred + romanTens + romanOnes;
         return result;
     }
 
